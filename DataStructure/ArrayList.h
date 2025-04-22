@@ -13,10 +13,12 @@ typedef struct ArrayListType
 
 ArrayList* createArrayList(int maxElementCount);
 void deleteArrayList(ArrayList* pList);
-bool isArrayListPull(ArrayList* pList);
+bool isArrayListFull(ArrayList* pList);
 bool addALElement(ArrayList* pList, int position, ArrayListNode element);
 bool removeALElement(ArrayList* pList, int position);
 ArrayListNode* getALElement(ArrayList* pList, int position);
 void displayArrayList(ArrayList* pList);
 void clearArrayLIst(ArrayList* pList);
 int getArrayListLength(ArrayList* pList);
+bool addALElementFirst(ArrayList* pList, int element);
+bool addALElementLast(ArrayList* pList, int element);

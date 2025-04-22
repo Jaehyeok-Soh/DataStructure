@@ -16,6 +16,9 @@
     <Filter Include="ArrayList">
       <UniqueIdentifier>{4669bdff-3e6b-4c87-9316-6aba1d90724e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LinkedList">
+      <UniqueIdentifier>{8ce969e0-e92d-47e8-b8ce-03e996ca47e5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -24,6 +27,12 @@
     <ClInclude Include="ArrayList.h">
       <Filter>ArrayList</Filter>
     </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>LinkedList</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -31,6 +40,15 @@
     </ClCompile>
     <ClCompile Include="ArrayList.cpp">
       <Filter>ArrayList</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayListExample.cpp">
+      <Filter>ArrayList</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>LinkedList</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
