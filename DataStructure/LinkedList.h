@@ -1,26 +1,25 @@
 #pragma once
-class ListNode
-{
-public:
-	int data;
-	ListNode* pLink;
 
-	~ListNode();
-};
+typedef struct ListNodeType
+{
+	int data;
+	ListNodeType* pLink;
+} ListNode;
 
 class LinkedList
 {
-public:
+private:
 	int currentElementCount;
 	ListNode headerNode;
 
 public:
+	~LinkedList();
+
 	bool addLLElement(int position, ListNode element);
 	bool removeLLElement(int position);
 	ListNode* getLLElement(int position);
 
 	void clearLinkedList();
-	int getLinkedListLength();
 	void deleteLinkedList();
 	bool isEmpty();
 
