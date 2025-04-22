@@ -1,33 +1,19 @@
 #include "pch.h"
 #include "LinkedList.h"
 
-LinkedList* LinkedList::createLinkedList()
+ListNode::~ListNode()
 {
-	LinkedList* pReturn = nullptr;
-	int i = 0;
-
-	pReturn = new LinkedList;
-	if (pReturn)
-	{
-		memset(pReturn, 0, sizeof(LinkedList));
-	}
-	else
-	{
-		std::cout << "error, allocate memory\n";
-	}
-
-	return pReturn;
+	SAFE_DELETE(pLink);
 }
 
-bool LinkedList::addLLElement(LinkedList* pList, int position, ListNode element)
+bool LinkedList::addLLElement(int position, ListNode element)
 {
 	bool ret = false;
-	int i = 0;
 	ListNode* pPreNode = nullptr;
 	ListNode* pNewNode = nullptr;
-	if (pList)
+	if (this)
 	{
-		if (position >= 0 && position <= pList->currentElementCount)
+		if (position >= 0 && position <= currentElementCount)
 		{
 			pNewNode = new ListNode;
 			if (pNewNode)
@@ -35,8 +21,8 @@ bool LinkedList::addLLElement(LinkedList* pList, int position, ListNode element)
 				*pNewNode = element;
 				pNewNode->pLink = nullptr;
 
-				pPreNode = &(pList->headerNode);
-				for (i = 0; i < position; i++)
+				pPreNode = &(headerNode);
+				for (auto i = 0; i < position; i++)
 				{
 					pPreNode = pPreNode->pLink;
 				}
@@ -44,7 +30,7 @@ bool LinkedList::addLLElement(LinkedList* pList, int position, ListNode element)
 				pNewNode->pLink = pPreNode->pLink;
 				pPreNode->pLink = pNewNode;
 
-				pList->currentElementCount++;
+				currentElementCount++;
 
 				ret = true;
 			}
@@ -63,25 +49,116 @@ bool LinkedList::addLLElement(LinkedList* pList, int position, ListNode element)
 	return ret;
 }
 
-bool LinkedList::removeLLElement(LinkedList* pList, int position)
+bool LinkedList::removeLLElement(int position)
 {
-	return false;
+	bool ret = false;
+	int arrayCount = 0;
+	ListNode* pNode = nullptr;
+	ListNode* pDelNode = nullptr;
+	if (this)
+	{
+		arrayCount = getLinkedListLength();
+		if (position >= 0 && position < arrayCount)
+		{
+			pNode = &headerNode;
+			for (auto i = 0; i < position; i++)
+			{
+				pNode = pNode->pLink;
+			}
+
+			pDelNode = pNode->pLink;
+			pNode->pLink = pDelNode->pLink;
+			SAFE_DELETE(pDelNode);
+
+			currentElementCount--;
+			
+			ret = true;
+		}
+		else
+		{
+			std::cout << "error, out of index\n";
+		}
+	}
+
+	return ret;
 }
 
-ListNode* LinkedList::getLLElement(LinkedList* pList, int position)
+ListNode* LinkedList::getLLElement(int position)
 {
-	return nullptr;
+	ListNode* pReturn = nullptr;
+	ListNode* pNode = nullptr;
+	if (this)
+	{
+		if (position >= 0 && position < currentElementCount)
+		{
+			pNode = &headerNode;
+			for (auto i = 0; i <= position; i++)
+			{
+				pNode = pNode->pLink;
+			}
+			pReturn = pNode;
+		}
+	}
+
+	return pReturn;
 }
 
-void LinkedList::clearLinkedList(LinkedList* pList)
+void LinkedList::clearLinkedList()
 {
+	if (this)
+	{
+		if (currentElementCount > 0)
+		{
+			removeLLElement(0);
+		}
+	}
 }
 
-int LinkedList::getLinkedListLength(LinkedList* pList)
+int LinkedList::getLinkedListLength()
 {
-	return 0;
+	int ret = 0;
+	if (this)
+	{
+		ret = currentElementCount;
+	}
+
+	return ret;
 }
 
-void LinkedList::deleteLinkedList(LinkedList* pList)
+void LinkedList::deleteLinkedList()
 {
+	if (this)
+	{
+		clearLinkedList();
+	}
+}
+
+bool LinkedList::isEmpty()
+{
+	bool ret = false;
+	if (this)
+	{
+		if (currentElementCount == 0)
+		{
+			ret = true;
+		}
+	}
+
+	return ret;
+}
+
+void LinkedList::DisplayLinkedList()
+{
+	if (this)
+	{
+		std::cout << "current element count : " << currentElementCount << std::endl;
+		for (auto i = 0; i < currentElementCount; i++)
+		{
+			std::cout << i << ', ' << getLLElement(i)->data << std::endl;
+		}
+	}
+	else
+	{
+		std::cout << "list empty\n";
+	}
 }

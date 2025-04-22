@@ -4,6 +4,8 @@ class ListNode
 public:
 	int data;
 	ListNode* pLink;
+
+	~ListNode();
 };
 
 class LinkedList
@@ -13,12 +15,14 @@ public:
 	ListNode headerNode;
 
 public:
-	LinkedList* createLinkedList();
-	bool addLLElement(LinkedList* pList, int position, ListNode element);
-	bool removeLLElement(LinkedList* pList, int position);
-	ListNode* getLLElement(LinkedList* pList, int position);
+	bool addLLElement(int position, ListNode element);
+	bool removeLLElement(int position);
+	ListNode* getLLElement(int position);
 
-	void clearLinkedList(LinkedList* pList);
-	int getLinkedListLength(LinkedList* pList);
-	void deleteLinkedList(LinkedList* pList);
+	void clearLinkedList();
+	int getLinkedListLength();
+	void deleteLinkedList();
+	bool isEmpty();
+
+	void DisplayLinkedList();
 };
