@@ -73,13 +73,14 @@ bool CircularList::removeCLElement(int position)
 			}
 			else
 			{
+				pDelNode = pHead;
 				while (currentNode->pLink != pHead)
 				{
 					currentNode = currentNode->pLink;
 				}
-				currentNode->pLink = pHead->pLink;
-				pHead = currentNode;
-				SAFE_DELETE(pHead);
+				currentNode->pLink = pDelNode->pLink;
+				pHead = pDelNode->pLink;
+				SAFE_DELETE(pDelNode);
 			}
 		}
 		else

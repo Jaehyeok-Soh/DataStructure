@@ -13,7 +13,6 @@ public :
 
 	~CircularList();
 
-	void deleteCircularList();
 	bool addCLElement(int position, CircularListNode element);
 	bool removeCLElement(int position);
 	void clearCircularList();

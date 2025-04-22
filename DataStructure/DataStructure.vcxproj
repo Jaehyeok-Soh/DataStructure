@@ -130,6 +130,7 @@
     <ClInclude Include="ArrayList.h" />
     <ClInclude Include="CircularList.h" />
     <ClInclude Include="Define.h" />
+    <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
@@ -137,6 +138,7 @@
     <ClCompile Include="ArrayList.cpp" />
     <ClCompile Include="ArrayListExample.cpp" />
     <ClCompile Include="CircularList.cpp" />
+    <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedListExample.cpp" />
     <ClCompile Include="main.cpp" />

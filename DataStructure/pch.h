@@ -10,6 +10,8 @@
 #include "Define.h"
 #include "ArrayList.h"
 #include "LinkedList.h"
+#include "CircularList.h"
+#include "DoublyLinkedList.h"
 //////////////////////////////////////////////////////
 
 #ifdef _DEBUG
