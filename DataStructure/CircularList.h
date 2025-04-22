@@ -2,15 +2,21 @@
 typedef struct CircularListNodeType
 {
 	int data;
-	CircularListNode* pLink;
+	CircularListNodeType* pLink;
 } CircularListNode;
 
 class CircularList
 {
 public :
-	int currentElementCount;
-	CircularListNode* pLink;
+	int currentElementCount = 0;
+	CircularListNode* pHead;
 
-	CircularList();
 	~CircularList();
+
+	void deleteCircularList();
+	bool addCLElement(int position, CircularListNode element);
+	bool removeCLElement(int position);
+	void clearCircularList();
+	CircularListNode* getCLElement(int position);
+	void displayCircularList();
 };
