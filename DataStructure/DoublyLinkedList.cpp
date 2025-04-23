@@ -16,7 +16,6 @@ bool DoublyList::addDLElement(int position, int data)
 	bool ret = false;
 
 	DoublyListNode* newNode(nullptr);
-	DoublyListNode* currentNode = pHead;
 	
 	if (position >= 0 && position <= currentElementCount)
 	{
@@ -27,14 +26,33 @@ bool DoublyList::addDLElement(int position, int data)
 			return ret;
 		}
 
-		for (auto i = 0; i < position; i++)
+		if (!pHead)
 		{
-			currentNode = currentNode->next;
+			pHead = pTail = newNode;
 		}
-		newNode->prev = currentNode;
-		newNode->next = currentNode->next;
-		currentNode->next = newNode;
-		currentNode->next->prev = newNode;
+		else if (position == 0)
+		{
+			pHead->prev = newNode;
+			newNode->next = pHead;
+			pHead = newNode;
+		}
+		else if(position == currentElementCount)
+		{
+			pTail->next = newNode;
+			newNode->prev = pTail;
+			pTail = newNode;
+		}
+		else
+		{
+			DoublyListNode* currentNode = pHead;
+			for (auto i = 0; i < position; i++)
+				currentNode = currentNode->next;
+
+			newNode->next = currentNode;
+			newNode->prev = currentNode->prev;
+			currentNode->prev->next = newNode;
+			currentNode->prev = newNode;
+		}
 
 		currentElementCount++;
 		ret = true;
@@ -50,21 +68,44 @@ bool DoublyList::addDLElement(int position, int data)
 bool DoublyList::removeDLElement(int position)
 {
 	bool ret = false;
-	int arrayCount = currentElementCount;
 
-	if (position >= 0 && position < arrayCount)
+	if (!pHead || !pTail)
+	{
+		return ret;
+	}
+
+	if (position >= 0 && position < currentElementCount)
 	{
 		DoublyListNode* tempNode(nullptr);
-		DoublyListNode* currentNode = pHead;
 
-		for (auto i = 0; i < position; i++)
+		if (pHead == pTail)
 		{
-			currentNode = currentNode->next;
+			tempNode = pHead;
+			pHead = pTail = nullptr;
 		}
-		tempNode = currentNode->next;
+		else if (position == 0)
+		{
+			tempNode = pHead;
+			pHead->next->prev = nullptr;
+			pHead = pHead->next;
+		}
+		else if (position == currentElementCount - 1)
+		{
+			tempNode = pTail;
+			pTail->prev->next = nullptr;
+			pTail = pTail->prev;
+		}
+		else
+		{
+			DoublyListNode* currentNode = pHead;
+			for (auto i = 0; i < position; i++)
+				currentNode = currentNode->next;
 
-		currentNode->next = tempNode->next;
-		tempNode->next->prev = currentNode;
+			tempNode = currentNode;
+			currentNode->prev->next = tempNode->next;
+			currentNode->next->prev = tempNode->prev;
+		}
+		
 		SAFE_DELETE(tempNode);
 
 		currentElementCount--;
