@@ -13,6 +13,7 @@ private:
 	ListNode headerNode;
 
 public:
+	LinkedList();
 	~LinkedList();
 
 	bool addLLElement(int position, ListNode element);
@@ -24,4 +25,8 @@ public:
 	bool isEmpty();
 
 	void DisplayLinkedList();
+
+	void iterateLinkedList();
+	void concatLinkedList(LinkedList* pList);
+	void reverseLinkedList();
 };

@@ -1,6 +1,11 @@
 #include "pch.h"
 #include "LinkedList.h"
 
+LinkedList::LinkedList()
+{
+	currentElementCount = 0;
+}
+
 LinkedList::~LinkedList()
 {
 	clearLinkedList();
@@ -18,6 +23,11 @@ bool LinkedList::addLLElement(int position, ListNode element)
 		{
 			*pNewNode = element;
 			pNewNode->pLink = nullptr;
+
+			if (position == 0)
+			{
+				headerNode = *pNewNode;
+			}
 
 			pPreNode = &(headerNode);
 			for (auto i = 0; i < position; i++)
@@ -115,6 +125,6 @@ void LinkedList::DisplayLinkedList()
 	std::cout << "current element count : " << currentElementCount << std::endl;
 	for (auto i = 0; i < currentElementCount; i++)
 	{
-		std::cout << i << ', ' << getLLElement(i)->data << std::endl;
+		std::cout << i << ", " << getLLElement(i)->data << std::endl;
 	}
 }
