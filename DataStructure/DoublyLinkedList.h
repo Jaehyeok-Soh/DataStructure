@@ -23,7 +23,6 @@ public:
 	DoublyListNode* pHead;
 	DoublyListNode* pTail;
 
-	void deleteDoublyList();
 	bool addDLElement(int position, int data);
 	bool removeDLElement(int position);
 	void clearDoublyList();
