@@ -32,3 +32,33 @@ int LinkedListExample()
 	
 	return 0;
 }
+
+int PolyLinkedListExample()
+{
+	LinkedList pListA, pListB;
+	LinkedList* pListC(nullptr);
+
+	pListA.addPolyNodeLast(6, 6);
+	pListA.addPolyNodeLast(4, 5);
+	pListA.addPolyNodeLast(2, 2);
+	pListA.displayPolyList();
+
+	pListB.addPolyNodeLast(1, 5);
+	pListB.addPolyNodeLast(2, 4);
+	pListB.addPolyNodeLast(3, 2);
+	pListB.addPolyNodeLast(4, 0);
+	pListB.displayPolyList();
+
+	pListC = pListA.polyAdd(&pListB);
+
+	if (pListC)
+	{
+		pListC->displayPolyList();
+		pListC->deleteLinkedList();
+	}
+
+	pListA.deleteLinkedList();
+	pListB.deleteLinkedList();
+
+	return 0;
+}

@@ -3,6 +3,9 @@
 typedef struct ListNodeType
 {
 	int data;
+	float coef; 
+	int degree; 
+	
 	ListNodeType* pLink;
 } ListNode;
 
@@ -26,7 +29,14 @@ public:
 
 	void DisplayLinkedList();
 
+	//Op
 	void iterateLinkedList();
 	void concatLinkedList(LinkedList* pList);
 	void reverseLinkedList();
+	//Poly
+	bool addPolyNodeLast(float coef, int degree);
+	bool addPolyNodeLast(LinkedList* pList, float coef, int degree);
+	LinkedList* polyAdd(LinkedList* pList);
+	void displayPolyList();
+	void displayPolyList(LinkedList* pList);
 };
