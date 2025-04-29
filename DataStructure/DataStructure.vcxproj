@@ -132,6 +132,7 @@
     <ClInclude Include="CircularList.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="DoublyLinkedList.h" />
+    <ClInclude Include="Exprdef.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedStack.h" />
     <ClInclude Include="pch.h" />
@@ -143,13 +144,16 @@
     <ClCompile Include="ArrayStackExample.cpp" />
     <ClCompile Include="CircularList.cpp" />
     <ClCompile Include="DoublyLinkedList.cpp" />
+    <ClCompile Include="ExprLinkedStack.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedListExample.cpp" />
     <ClCompile Include="LinkedListOp.cpp" />
     <ClCompile Include="LinkedStack.cpp" />
+    <ClCompile Include="LinkedStackExample.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="PolyList.cpp" />
+    <ClCompile Include="StackUtil.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

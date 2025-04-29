@@ -6,10 +6,10 @@ int LinkedStackExample()
 	LinkedStack linkedStack;
 	StackNode* pNode = nullptr;
 
-	StackNode node1 = StackNode('A');
-	StackNode node2 = StackNode('B');
-	StackNode node3 = StackNode('C');
-	StackNode node4 = StackNode('D');
+	CharStackNode node1 = CharStackNode('A');
+	CharStackNode node2 = CharStackNode('B');
+	CharStackNode node3 = CharStackNode('C');
+	CharStackNode node4 = CharStackNode('D');
 
 	linkedStack.pushLS(node1);
 	linkedStack.pushLS(node2);
@@ -21,7 +21,7 @@ int LinkedStackExample()
 	pNode = linkedStack.popLS();
 	if (pNode)
 	{
-		std::cout << "Pop-" << pNode->data << std::endl;
+		std::cout << "Pop-" << pNode->getCharData() << std::endl;
 		SAFE_DELETE(pNode);
 	}
 	else
@@ -34,7 +34,7 @@ int LinkedStackExample()
 	pNode = linkedStack.peekLS();
 	if (pNode)
 	{
-		std::cout << "Peek-" << pNode->data << std::endl;
+		std::cout << "Peek-" << pNode->getCharData() << std::endl;
 		SAFE_DELETE(pNode);
 	}
 	else
@@ -78,6 +78,55 @@ int LinkedStackExample()
 	{
 		std::cout << "FAIL, " << failExprStr;
 	}
+
+	//LinkedStack Expression
+	//2 3 4 + 5 * -
+	ExprToken* pExprTokens = new ExprToken[7];
+	pExprTokens[0].type = operand;
+	pExprTokens[0].value = 2;
+	pExprTokens[1].type = operand;
+	pExprTokens[1].value = 3;
+	pExprTokens[2].type = operand;
+	pExprTokens[2].value = 4;
+	pExprTokens[3].type = plus;
+	pExprTokens[3].value = 0;
+	pExprTokens[4].type = operand;
+	pExprTokens[4].value = 5;
+	pExprTokens[5].type = times;
+	pExprTokens[5].value = 0;
+	pExprTokens[6].type = minus;
+	pExprTokens[6].value = 0;
+
+	std::cout << "Expression: 2 3 4 + 5 * - \n";
+	linkedStack.calcExpr(pExprTokens, 7);
+	SAFE_DELETE_ARRAY(pExprTokens);
+
+	//2 - (3 + 4) * 5
+	pExprTokens = new ExprToken[9];
+	pExprTokens[0].type = operand;
+	pExprTokens[0].value = 2;
+	pExprTokens[1].type = minus;
+	pExprTokens[1].value = 0;
+	pExprTokens[2].type = lparen;
+	pExprTokens[2].value = 0;
+	pExprTokens[3].type = operand;
+	pExprTokens[3].value = 3;
+	pExprTokens[4].type = plus;
+	pExprTokens[4].value = 0;
+	pExprTokens[5].type = operand;
+	pExprTokens[5].value = 4;
+	pExprTokens[6].type = rparen;
+	pExprTokens[6].value = 0;
+	pExprTokens[7].type = times;
+	pExprTokens[7].value = 0;
+	pExprTokens[8].type = operand;
+	pExprTokens[8].value = 5;
+
+	std::cout << "Infix Expression : 2 - (3 + 4) * 5 \n";
+	std::cout << "Postfix Expression : \n";
+
+	linkedStack.convertInfexToPostFix(pExprTokens, 9);
+	SAFE_DELETE_ARRAY(pExprTokens);
 
 	return 0;
 }

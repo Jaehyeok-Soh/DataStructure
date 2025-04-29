@@ -22,6 +22,9 @@
     <Filter Include="Stack">
       <UniqueIdentifier>{ad405e29-fce1-4d83-93b7-98cea6940375}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Type">
+      <UniqueIdentifier>{72bd3f06-7ab9-4616-9ea6-f7675defcdbc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -47,6 +50,9 @@
     </ClInclude>
     <ClInclude Include="LinkedStack.h">
       <Filter>Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Exprdef.h">
+      <Filter>Type</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +93,15 @@
       <Filter>Stack</Filter>
     </ClCompile>
     <ClCompile Include="LinkedStack.cpp">
+      <Filter>Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedStackExample.cpp">
+      <Filter>Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="StackUtil.cpp">
+      <Filter>Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="ExprLinkedStack.cpp">
       <Filter>Stack</Filter>
     </ClCompile>
   </ItemGroup>

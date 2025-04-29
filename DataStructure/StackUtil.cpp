@@ -23,7 +23,7 @@ char* LinkedStack::reverseString(char* pSource)
 	if (!pReturn)
 		return nullptr;
 
-	StackNode node;
+	CharStackNode node;
 	for (auto i = 0; i < size; i++)
 	{
 		node.data = pSource[i];
@@ -35,7 +35,7 @@ char* LinkedStack::reverseString(char* pSource)
 		pNode = linkedStack.popLS();
 		if (pNode)
 		{
-			pReturn[i] = pNode->data;
+			pReturn[i] = pNode->getCharData();
 			SAFE_DELETE(pNode);
 		}
 	}
@@ -69,7 +69,7 @@ bool LinkedStack::checkBracketMatching(char* pSource)
 		return ret;
 	}
 
-	StackNode node;
+	CharStackNode node;
 	for (auto i = 0; i < size && ret == true; i++)
 	{
 		symbol = pSource[i];
@@ -93,7 +93,7 @@ bool LinkedStack::checkBracketMatching(char* pSource)
 			}
 			else
 			{
-				checkSymbol = pNode->data;
+				checkSymbol = pNode->getCharData();
 				if ((symbol == '}' && checkSymbol == '{')
 					|| (symbol == ']' && checkSymbol == '[')
 					|| (symbol == ')' && checkSymbol == '('))

@@ -1,10 +1,29 @@
 #include "pch.h"
 #include "LinkedStack.h"
 
-StackNode::StackNode(char cValue)
+CharStackNode* CharStackNode::Clone() const
+{
+	return new CharStackNode(*this);
+}
+
+CharStackNode::CharStackNode(char cValue)
 {
 	data = cValue;
 	next = nullptr;
+}
+
+CharStackNode::~CharStackNode()
+{
+}
+
+char CharStackNode::getCharData() const
+{
+	return data;
+}
+
+ExprToken CharStackNode::getExprData() const
+{
+	return ExprToken();
 }
 
 LinkedStack::LinkedStack()
@@ -18,14 +37,24 @@ LinkedStack::~LinkedStack()
 	deleteLinkedStack();
 }
 
-bool LinkedStack::pushLS(StackNode element)
+bool LinkedStack::pushLS(StackNode& element)
 {
 	bool ret = false;
+	
+	StackNode* newNode = nullptr;
 
-	StackNode* newNode = new StackNode();
+	if (typeid(element) == typeid(ExprStackNode))
+	{
+		newNode = new ExprStackNode();
+	}
+	else if (typeid(element) == typeid(CharStackNode))
+	{
+		newNode = new CharStackNode();
+	}
+	
 	if (newNode)
 	{
-		*newNode = element;
+		newNode = element.Clone();
 
 		if (pTopElement == nullptr)
 		{
@@ -115,8 +144,17 @@ void LinkedStack::displayLinkedStack()
 	current = pTopElement;
 	while (current)
 	{
-		std::cout << currentElementCount - i << '-' << current->data << std::endl;
+		std::cout << currentElementCount - i << '-' << current->getCharData() << std::endl;
 		i++;
 		current = current->next;
 	}
+}
+
+StackNode::StackNode()
+{
+	next = nullptr;
+}
+
+StackNode::~StackNode()
+{
 }
