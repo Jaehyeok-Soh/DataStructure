@@ -14,8 +14,9 @@ public:
 	void deleteArrayStack();
 	bool isArrayStackFull();
 	bool isArrayStackEmpty();
+	void displayArrayStack();
 
-	ArrayStack();
+	ArrayStack(int size);
 private:
 	int maxElementCount;
 	int currentElementCount;
