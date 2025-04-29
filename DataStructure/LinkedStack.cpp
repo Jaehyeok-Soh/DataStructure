@@ -1,9 +1,9 @@
 #include "pch.h"
 #include "LinkedStack.h"
 
-StackNode::StackNode()
+StackNode::StackNode(char cValue)
 {
-	data = '\0';
+	data = cValue;
 	next = nullptr;
 }
 
@@ -11,6 +11,11 @@ LinkedStack::LinkedStack()
 {
 	currentElementCount = 0;
 	pTopElement = nullptr;
+}
+
+LinkedStack::~LinkedStack()
+{
+	deleteLinkedStack();
 }
 
 bool LinkedStack::pushLS(StackNode element)
@@ -96,5 +101,23 @@ bool LinkedStack::isLinkedStackFull()
 bool LinkedStack::isLinkedStackEmpty()
 {
 	return !pTopElement && currentElementCount == 0;
+}
+
+void LinkedStack::displayLinkedStack()
+{
+	int i(1);
+	StackNode* current = nullptr;
+	if (pTopElement)
+	{
+		std::cout << "current stack count : " << currentElementCount << std::endl;
+	}
+
+	current = pTopElement;
+	while (current)
+	{
+		std::cout << currentElementCount - i << '-' << current->data << std::endl;
+		i++;
+		current = current->next;
+	}
 }
 

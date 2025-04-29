@@ -12,6 +12,8 @@
 #include "LinkedList.h"
 #include "CircularList.h"
 #include "DoublyLinkedList.h"
+#include "ArrayStack.h"
+#include "LinkedStack.h"
 //////////////////////////////////////////////////////
 
 #ifdef _DEBUG
