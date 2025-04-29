@@ -46,5 +46,38 @@ int LinkedStackExample()
 
 	linkedStack.deleteLinkedStack();
 
+	//LinkedStack util
+	char sourceStr[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char successExprStr[] = "{(A * B) / C} - {(D + E) && (F - G)}";
+	char failExprStr[] = "{(A * B) / C - {(D + E) && (F - G))}";
+	bool checkResult = false;
+
+	char* pReverseStr = linkedStack.reverseString(sourceStr);
+	if (pReverseStr)
+	{
+		std::cout << sourceStr << "=>" << pReverseStr << std::endl;
+		SAFE_DELETE(pReverseStr);
+	}
+
+	checkResult = linkedStack.checkBracketMatching(successExprStr);
+	if (checkResult)
+	{
+		std::cout << "SUCCESS, " << successExprStr;
+	}
+	else
+	{
+		std::cout << "FAIL, " << successExprStr;
+	}
+
+	checkResult = linkedStack.checkBracketMatching(failExprStr);
+	if (checkResult)
+	{
+		std::cout << "SUCCESS, " << failExprStr;
+	}
+	else
+	{
+		std::cout << "FAIL, " << failExprStr;
+	}
+
 	return 0;
 }

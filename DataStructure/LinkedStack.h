@@ -26,4 +26,8 @@ public :
 	bool isLinkedStackFull();
 	bool isLinkedStackEmpty();
 	void displayLinkedStack();
+
+	//StackUtil
+	char* reverseString(char* pSource);
+	bool checkBracketMatching(char* pSource);
 };

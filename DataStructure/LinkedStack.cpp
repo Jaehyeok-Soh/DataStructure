@@ -120,4 +120,3 @@ void LinkedStack::displayLinkedStack()
 		current = current->next;
 	}
 }
-
