@@ -25,7 +25,7 @@ bool ArrayQueue::enqueueAQ(ArrayQueueNode element)
 
 	if (isArrayQueueFull() == false)
 	{
-		rear++;
+		rear = (rear + 1) % maxElementCount;
 		pElement[rear] = element;
 		currentElementCount++;
 		ret = true;
@@ -47,7 +47,7 @@ ArrayQueueNode* ArrayQueue::dequeueAQ()
 		pReturn = new ArrayQueueNode();
 		if (pReturn)
 		{
-			front++;
+			front = (front + 1) % maxElementCount;
 			pReturn->data = pElement[front].data;
 			currentElementCount--;
 		}
@@ -81,7 +81,7 @@ bool ArrayQueue::isArrayQueueFull()
 {
 	bool ret = false;
 
-	if (currentElementCount == maxElementCount || rear == maxElementCount - 1)
+	if (currentElementCount == maxElementCount)
 	{
 		ret = true;
 	}
@@ -103,10 +103,15 @@ bool ArrayQueue::isArrayQueueEmpty()
 
 void ArrayQueue::displayArrayQueue()
 {
+	int pos(0), maxElementIndex(0);
+
 	std::cout << "Queue size : " << maxElementCount << " Current element count : " << currentElementCount << std::endl;
-	for (auto i = front + 1; i <= rear; i++)
+	
+	maxElementIndex = front + currentElementCount;
+	for (auto i = front + 1; i <= maxElementIndex; i++)
 	{
-		std::cout << i << "-" << pElement[i].data << std::endl;
+		pos = i % maxElementCount;
+		std::cout << i << "-" << pElement[pos].data << std::endl;
 	}
 }
 
