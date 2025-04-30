@@ -135,6 +135,7 @@
     <ClInclude Include="Exprdef.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedStack.h" />
+    <ClInclude Include="MapDef.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,7 @@
     <ClCompile Include="LinkedStack.cpp" />
     <ClCompile Include="LinkedStackExample.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mapLinkedStack.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="PolyList.cpp" />
     <ClCompile Include="StackUtil.cpp" />

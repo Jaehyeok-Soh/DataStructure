@@ -26,6 +26,11 @@ ExprToken CharStackNode::getExprData() const
 	return ExprToken();
 }
 
+MapPosition CharStackNode::getMapData() const
+{
+	return MapPosition();
+}
+
 LinkedStack::LinkedStack()
 {
 	currentElementCount = 0;
@@ -50,6 +55,10 @@ bool LinkedStack::pushLS(StackNode& element)
 	else if (typeid(element) == typeid(CharStackNode))
 	{
 		newNode = new CharStackNode();
+	}
+	else if (typeid(element) == typeid(MapStackNode))
+	{
+		newNode = new MapStackNode();
 	}
 	
 	if (newNode)

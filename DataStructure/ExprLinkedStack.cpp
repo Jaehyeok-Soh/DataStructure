@@ -26,6 +26,11 @@ ExprToken ExprStackNode::getExprData() const
 	return data;
 }
 
+MapPosition ExprStackNode::getMapData() const
+{
+	return MapPosition();
+}
+
 void LinkedStack::calcExpr(ExprToken* pExprTokens, int tokenCount)
 {
 	LinkedStack* pStack;

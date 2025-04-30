@@ -25,6 +25,9 @@
     <Filter Include="Type">
       <UniqueIdentifier>{72bd3f06-7ab9-4616-9ea6-f7675defcdbc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Stack\Map">
+      <UniqueIdentifier>{6c43a3b1-2501-4af0-9af7-f7e362190c8c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -53,6 +56,9 @@
     </ClInclude>
     <ClInclude Include="Exprdef.h">
       <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="MapDef.h">
+      <Filter>Stack\Map</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +109,9 @@
     </ClCompile>
     <ClCompile Include="ExprLinkedStack.cpp">
       <Filter>Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="mapLinkedStack.cpp">
+      <Filter>Stack\Map</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

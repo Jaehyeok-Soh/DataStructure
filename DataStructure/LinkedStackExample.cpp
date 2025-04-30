@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "LinkedStack.h"
+#include "MapDef.h"
 
 int LinkedStackExample()
 {
@@ -127,6 +128,32 @@ int LinkedStackExample()
 
 	linkedStack.convertInfexToPostFix(pExprTokens, 9);
 	SAFE_DELETE_ARRAY(pExprTokens);
+
+	//map
+	MapPosition startPos, endPos;
+	int mazeArray[HEIGHT][WIDTH] = {
+		{0, 0, 1, 1, 1, 1, 1, 1},
+		{1, 0, 0, 0, 0, 0, 0, 1},
+		{1, 1, 1, 0, 1, 1, 1, 1},
+		{1, 1, 1, 0, 1, 1, 1, 1},
+		{1, 0, 0, 0, 0, 0, 0, 1},
+		{1, 0, 1, 1, 1, 1, 1, 1},
+		{1, 0, 0, 0, 0, 0, 0, 0},
+		{1, 1, 1, 1, 1, 1, 1, 0}
+	};
+
+	startPos.x = 0;
+	startPos.y = 0;
+	endPos.x = 7;
+	endPos.y = 7;
+
+	linkedStack.printMaze(mazeArray);
+
+	linkedStack.findPath(mazeArray, startPos, endPos);
+
+	linkedStack.showPath(mazeArray);
+
+	linkedStack.deleteLinkedStack();
 
 	return 0;
 }
