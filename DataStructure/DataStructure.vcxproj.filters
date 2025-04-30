@@ -28,6 +28,9 @@
     <Filter Include="Stack\Map">
       <UniqueIdentifier>{6c43a3b1-2501-4af0-9af7-f7e362190c8c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Queue">
+      <UniqueIdentifier>{6984dd53-d34e-4852-9f1a-584687fba40a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -42,12 +45,6 @@
     <ClInclude Include="LinkedList.h">
       <Filter>LinkedList</Filter>
     </ClInclude>
-    <ClInclude Include="CircularList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DoublyLinkedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ArrayStack.h">
       <Filter>Stack</Filter>
     </ClInclude>
@@ -59,6 +56,15 @@
     </ClInclude>
     <ClInclude Include="MapDef.h">
       <Filter>Stack\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularList.h">
+      <Filter>LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublyLinkedList.h">
+      <Filter>LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayQueue.h">
+      <Filter>Queue</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -76,21 +82,6 @@
     </ClCompile>
     <ClCompile Include="LinkedList.cpp">
       <Filter>LinkedList</Filter>
-    </ClCompile>
-    <ClCompile Include="CircularList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DoublyLinkedList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedListExample.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedListOp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PolyList.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ArrayStack.cpp">
       <Filter>Stack</Filter>
@@ -112,6 +103,27 @@
     </ClCompile>
     <ClCompile Include="mapLinkedStack.cpp">
       <Filter>Stack\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="CircularList.cpp">
+      <Filter>LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="DoublyLinkedList.cpp">
+      <Filter>LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListOp.cpp">
+      <Filter>LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListExample.cpp">
+      <Filter>LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="PolyList.cpp">
+      <Filter>LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayQueue.cpp">
+      <Filter>Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayQueueExample.cpp">
+      <Filter>Queue</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

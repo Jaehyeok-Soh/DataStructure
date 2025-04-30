@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList.h" />
+    <ClInclude Include="ArrayQueue.h" />
     <ClInclude Include="ArrayStack.h" />
     <ClInclude Include="CircularList.h" />
     <ClInclude Include="Define.h" />
@@ -141,6 +142,8 @@
   <ItemGroup>
     <ClCompile Include="ArrayList.cpp" />
     <ClCompile Include="ArrayListExample.cpp" />
+    <ClCompile Include="ArrayQueue.cpp" />
+    <ClCompile Include="ArrayQueueExample.cpp" />
     <ClCompile Include="ArrayStack.cpp" />
     <ClCompile Include="ArrayStackExample.cpp" />
     <ClCompile Include="CircularList.cpp" />
