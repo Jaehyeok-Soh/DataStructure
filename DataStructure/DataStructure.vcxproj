@@ -140,6 +140,8 @@
     <ClInclude Include="LinkedStack.h" />
     <ClInclude Include="MapDef.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="simdef.h" />
+    <ClInclude Include="Simlinkedqueue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArrayList.cpp" />
@@ -164,6 +166,8 @@
     <ClCompile Include="mapLinkedStack.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="PolyList.cpp" />
+    <ClCompile Include="Simlinkedqueue.cpp" />
+    <ClCompile Include="SimMain.cpp" />
     <ClCompile Include="StackUtil.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

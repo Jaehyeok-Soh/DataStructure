@@ -34,6 +34,9 @@
     <Filter Include="Queue\Deque">
       <UniqueIdentifier>{37bf7e82-3987-495b-aaf2-e936f39684d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Queue\SimDeque">
+      <UniqueIdentifier>{694edad4-e730-4203-93e2-fb32d076d53c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -74,6 +77,12 @@
     </ClInclude>
     <ClInclude Include="LinkedDeque.h">
       <Filter>Queue\Deque</Filter>
+    </ClInclude>
+    <ClInclude Include="simdef.h">
+      <Filter>Queue\SimDeque</Filter>
+    </ClInclude>
+    <ClInclude Include="Simlinkedqueue.h">
+      <Filter>Queue\SimDeque</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +154,12 @@
     </ClCompile>
     <ClCompile Include="LinkedDequeExample.cpp">
       <Filter>Queue\Deque</Filter>
+    </ClCompile>
+    <ClCompile Include="Simlinkedqueue.cpp">
+      <Filter>Queue\SimDeque</Filter>
+    </ClCompile>
+    <ClCompile Include="SimMain.cpp">
+      <Filter>Queue\SimDeque</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
