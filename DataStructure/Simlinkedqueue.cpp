@@ -163,7 +163,7 @@ void Simlinkedqueue::processArrival(int currentTime, Simlinkedqueue* pWaitQueue)
 		{
 			pWaitQueue->enqueueLQ(*pArrivalNode);
 			printSimCustomer(currentTime, pArrivalNode->data);
-			QueueNode* tempNode = dequeueLQ();
+			QueueNode* tempNode = dequeueLQ();//arrival queue
 			SAFE_DELETE(tempNode);
 		}
 		else
