@@ -4,6 +4,7 @@ class QueueNode
 public:
 	char data;
 	QueueNode* next;
+	QueueNode* prev;
 
 	QueueNode() = default;
 	QueueNode(char _data);

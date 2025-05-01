@@ -134,6 +134,7 @@
     <ClInclude Include="Define.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="Exprdef.h" />
+    <ClInclude Include="LinkedDeque.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedQueue.h" />
     <ClInclude Include="LinkedStack.h" />
@@ -150,6 +151,8 @@
     <ClCompile Include="CircularList.cpp" />
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="ExprLinkedStack.cpp" />
+    <ClCompile Include="LinkedDeque.cpp" />
+    <ClCompile Include="LinkedDequeExample.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedListExample.cpp" />
     <ClCompile Include="LinkedListOp.cpp" />
