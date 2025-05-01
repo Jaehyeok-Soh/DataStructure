@@ -66,6 +66,9 @@
     <ClInclude Include="ArrayQueue.h">
       <Filter>Queue</Filter>
     </ClInclude>
+    <ClInclude Include="LinkedQueue.h">
+      <Filter>Queue</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -123,6 +126,12 @@
       <Filter>Queue</Filter>
     </ClCompile>
     <ClCompile Include="ArrayQueueExample.cpp">
+      <Filter>Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedQueue.cpp">
+      <Filter>Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedQueueExample.cpp">
       <Filter>Queue</Filter>
     </ClCompile>
   </ItemGroup>
