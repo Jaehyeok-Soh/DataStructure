@@ -37,6 +37,9 @@
     <Filter Include="Queue\SimDeque">
       <UniqueIdentifier>{694edad4-e730-4203-93e2-fb32d076d53c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tree">
+      <UniqueIdentifier>{abe90ad7-dd12-4014-8e12-95af74887089}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -83,6 +86,9 @@
     </ClInclude>
     <ClInclude Include="Simlinkedqueue.h">
       <Filter>Queue\SimDeque</Filter>
+    </ClInclude>
+    <ClInclude Include="BinTree.h">
+      <Filter>Tree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +166,12 @@
     </ClCompile>
     <ClCompile Include="SimMain.cpp">
       <Filter>Queue\SimDeque</Filter>
+    </ClCompile>
+    <ClCompile Include="BinTree.cpp">
+      <Filter>Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="BinTreeExample.cpp">
+      <Filter>Tree</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
