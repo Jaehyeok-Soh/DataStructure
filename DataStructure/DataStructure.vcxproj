@@ -131,6 +131,8 @@
     <ClInclude Include="ArrayQueue.h" />
     <ClInclude Include="ArrayStack.h" />
     <ClInclude Include="BinTree.h" />
+    <ClInclude Include="BintreeLinkedQueue.h" />
+    <ClInclude Include="BintreeLinkedStack.h" />
     <ClInclude Include="CircularList.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="DoublyLinkedList.h" />
@@ -153,6 +155,11 @@
     <ClCompile Include="ArrayStackExample.cpp" />
     <ClCompile Include="BinTree.cpp" />
     <ClCompile Include="BinTreeExample.cpp" />
+    <ClCompile Include="BintreeLinkedQueue.cpp" />
+    <ClCompile Include="BintreeLinkedStack.cpp" />
+    <ClCompile Include="BinTreeOp.cpp" />
+    <ClCompile Include="BintreeTraversal.cpp" />
+    <ClCompile Include="BintreeTraversalRec.cpp" />
     <ClCompile Include="CircularList.cpp" />
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="ExprLinkedStack.cpp" />

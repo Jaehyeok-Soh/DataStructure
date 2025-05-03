@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "LinkedStack.h"
+#include "BinTree.h"
 
 CharStackNode* CharStackNode::Clone() const
 {

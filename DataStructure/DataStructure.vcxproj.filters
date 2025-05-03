@@ -40,6 +40,9 @@
     <Filter Include="Tree">
       <UniqueIdentifier>{abe90ad7-dd12-4014-8e12-95af74887089}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tree\BintreeTraversal">
+      <UniqueIdentifier>{e73b7749-a4f3-4273-b61f-d0fde9602baf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -89,6 +92,12 @@
     </ClInclude>
     <ClInclude Include="BinTree.h">
       <Filter>Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="BintreeLinkedStack.h">
+      <Filter>Tree\BintreeTraversal</Filter>
+    </ClInclude>
+    <ClInclude Include="BintreeLinkedQueue.h">
+      <Filter>Tree\BintreeTraversal</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +180,21 @@
       <Filter>Tree</Filter>
     </ClCompile>
     <ClCompile Include="BinTreeExample.cpp">
+      <Filter>Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="BintreeTraversalRec.cpp">
+      <Filter>Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="BintreeTraversal.cpp">
+      <Filter>Tree\BintreeTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="BintreeLinkedStack.cpp">
+      <Filter>Tree\BintreeTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="BintreeLinkedQueue.cpp">
+      <Filter>Tree\BintreeTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="BinTreeOp.cpp">
       <Filter>Tree</Filter>
     </ClCompile>
   </ItemGroup>

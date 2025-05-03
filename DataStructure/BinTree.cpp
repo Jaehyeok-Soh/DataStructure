@@ -71,8 +71,16 @@ BinTreeNode* BinTreeNode::getRightChildNodeBT()
 
 void BinTreeNode::deleteBinTreeNode()
 {
-	SAFE_DELETE(pLeftChild);
-	SAFE_DELETE(pRightChild);
+	if (pLeftChild)
+	{
+		SAFE_DELETE(pLeftChild);
+	}
+
+	if (pRightChild)
+	{
+
+		SAFE_DELETE(pRightChild);
+	}
 }
 
 BinTree::BinTree()
@@ -103,5 +111,6 @@ BinTreeNode* BinTree::getRootNodeBT()
 
 void BinTree::deleteBinTree()
 {
+	pRootNode->deleteBinTreeNode();
 	SAFE_DELETE(pRootNode);
 }
