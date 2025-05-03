@@ -43,6 +43,9 @@
     <Filter Include="Tree\BintreeTraversal">
       <UniqueIdentifier>{e73b7749-a4f3-4273-b61f-d0fde9602baf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tree\Heap">
+      <UniqueIdentifier>{bb9c9716-b1db-4d5a-90b7-e8190bd813e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -98,6 +101,9 @@
     </ClInclude>
     <ClInclude Include="BintreeLinkedQueue.h">
       <Filter>Tree\BintreeTraversal</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayHeap.h">
+      <Filter>Tree\Heap</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +202,12 @@
     </ClCompile>
     <ClCompile Include="BinTreeOp.cpp">
       <Filter>Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayHeap.cpp">
+      <Filter>Tree\Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="HeapExample.cpp">
+      <Filter>Tree\Heap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
