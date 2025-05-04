@@ -46,6 +46,9 @@
     <Filter Include="Tree\Heap">
       <UniqueIdentifier>{bb9c9716-b1db-4d5a-90b7-e8190bd813e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tree\BinSearchTree">
+      <UniqueIdentifier>{3dbe524c-0ecc-459f-9815-08ebbba78c83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -104,6 +107,9 @@
     </ClInclude>
     <ClInclude Include="ArrayHeap.h">
       <Filter>Tree\Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="BinSearchTree.h">
+      <Filter>Tree\BinSearchTree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +214,9 @@
     </ClCompile>
     <ClCompile Include="HeapExample.cpp">
       <Filter>Tree\Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="BinSearchTree.cpp">
+      <Filter>Tree\BinSearchTree</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
