@@ -1,13 +1,5 @@
 #pragma once
-
-#define USED		true
-#define NOT_USED	false
-
-#define SUCCESS		true
-#define FAIL		false
-
-#define GRAPH_UNDIRECTED	1
-#define GRAPH_DIRECTED		2
+#include "Define.h"
 
 class ArrayGraph
 {

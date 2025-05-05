@@ -4,6 +4,7 @@
 
 class LinkedGraph
 {
+public:
 	int maxVertexCount;
 	int currentVertexCount = 0;
 	int currentEdgeCount = 0;
@@ -23,8 +24,13 @@ class LinkedGraph
 	bool checkVertexValid(int vertexID);
 	bool removeVertexLG(int vertexID);
 	bool removeEdgeLG(int fromVertexID, int toVertexID);
-	void deleteGraphNode(GraphLinkedList& pList, int delVertxID);
-	int findGraphNodePosition(GraphLinkedList& pList, int vertexID);
+	void deleteGraphNode(GraphLinkedList* pList, int delVertxID);
+	int findGraphNodePosition(GraphLinkedList* pList, int vertexID);
 	void displayLinkedGraph();
-	bool addLLElementForVertex(GraphLinkedList& pList, int position, GraphVertex vertex);
+	bool addLLElementForVertex(GraphLinkedList* pList, int position, GraphVertex vertex);
+
+	//DFS
+	//graphLinkedStack.h
+	void traversalDFS(int startVertexID);
+	void traversalBSF(int startVertexID);
 };

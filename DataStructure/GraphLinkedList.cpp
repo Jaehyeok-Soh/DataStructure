@@ -8,11 +8,12 @@ bool GraphLinkedList::addLLElment(int position, GraphListNode node)
 	if (position >= 0 && position <= currentElementCount)
 	{
 		GraphListNode* newNode = new GraphListNode();
-		newNode = &node;
+		*newNode = node;
 
 		if (pHead == nullptr)
 		{
-			pHead, pTail = newNode;
+			pHead = newNode;
+			pTail = newNode;
 			currentElementCount++;
 			ret = true;
 			return ret;

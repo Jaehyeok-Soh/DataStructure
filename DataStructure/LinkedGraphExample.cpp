@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "LinkedGraph.h"
 
-int main()
+int LinkedGraphExample()
 {
 	LinkedGraph g1 = LinkedGraph(8, GRAPH_UNDIRECTED);
 

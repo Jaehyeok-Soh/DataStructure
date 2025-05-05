@@ -55,6 +55,9 @@
     <Filter Include="Graph\LinkedGraph">
       <UniqueIdentifier>{3cced2f4-aff3-4f3e-a730-6a5a4d621f5f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Graph\LinkedGraph\GraphTraversal">
+      <UniqueIdentifier>{1a41ac3a-8107-4486-ae1e-acd973b49626}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -125,6 +128,9 @@
     </ClInclude>
     <ClInclude Include="GraphLinkedList.h">
       <Filter>Graph\LinkedGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphLinkedStack.h">
+      <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +249,15 @@
       <Filter>Graph\LinkedGraph</Filter>
     </ClCompile>
     <ClCompile Include="GraphLinkedList.cpp">
+      <Filter>Graph\LinkedGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphTraversal.cpp">
+      <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphLinkedStack.cpp">
+      <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedGraphExample.cpp">
       <Filter>Graph\LinkedGraph</Filter>
     </ClCompile>
   </ItemGroup>
