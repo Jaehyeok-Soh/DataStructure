@@ -52,6 +52,9 @@
     <Filter Include="Graph">
       <UniqueIdentifier>{0a04fd38-3548-4c69-b8b8-ef8be88e16ac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Graph\LinkedGraph">
+      <UniqueIdentifier>{3cced2f4-aff3-4f3e-a730-6a5a4d621f5f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -116,6 +119,12 @@
     </ClInclude>
     <ClInclude Include="ArrayGraph.h">
       <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedGraph.h">
+      <Filter>Graph\LinkedGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphLinkedList.h">
+      <Filter>Graph\LinkedGraph</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +238,12 @@
     </ClCompile>
     <ClCompile Include="GraphExample.cpp">
       <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedGraph.cpp">
+      <Filter>Graph\LinkedGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphLinkedList.cpp">
+      <Filter>Graph\LinkedGraph</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
