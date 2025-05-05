@@ -49,6 +49,9 @@
     <Filter Include="Tree\BinSearchTree">
       <UniqueIdentifier>{3dbe524c-0ecc-459f-9815-08ebbba78c83}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Graph">
+      <UniqueIdentifier>{0a04fd38-3548-4c69-b8b8-ef8be88e16ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -110,6 +113,9 @@
     </ClInclude>
     <ClInclude Include="BinSearchTree.h">
       <Filter>Tree\BinSearchTree</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayGraph.h">
+      <Filter>Graph</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +223,12 @@
     </ClCompile>
     <ClCompile Include="BinSearchTree.cpp">
       <Filter>Tree\BinSearchTree</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayGraph.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphExample.cpp">
+      <Filter>Graph</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

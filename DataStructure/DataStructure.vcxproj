@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ArrayGraph.h" />
     <ClInclude Include="ArrayHeap.h" />
     <ClInclude Include="ArrayList.h" />
     <ClInclude Include="ArrayQueue.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Simlinkedqueue.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayGraph.cpp" />
     <ClCompile Include="ArrayHeap.cpp" />
     <ClCompile Include="ArrayList.cpp" />
     <ClCompile Include="ArrayListExample.cpp" />
@@ -167,6 +169,7 @@
     <ClCompile Include="CircularList.cpp" />
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="ExprLinkedStack.cpp" />
+    <ClCompile Include="GraphExample.cpp" />
     <ClCompile Include="HeapExample.cpp" />
     <ClCompile Include="LinkedDeque.cpp" />
     <ClCompile Include="LinkedDequeExample.cpp" />
