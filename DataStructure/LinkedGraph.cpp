@@ -5,7 +5,7 @@ LinkedGraph::LinkedGraph(int _maxVertexCount, int _graphType)
 {
 	maxVertexCount = _maxVertexCount;
 	graphType = _graphType;
-	ppAdjEdge = new GraphLinkedList * [_maxVertexCount];
+	ppAdjEdge = new GraphLinkedList[_maxVertexCount];
 	pVertex = new int[_maxVertexCount];
 }
 
@@ -16,11 +16,9 @@ LinkedGraph::~LinkedGraph()
 
 void LinkedGraph::deleteLinkedGraph()
 {
-
 	for (auto i = 0; i < maxVertexCount; i++)
 	{
-		auto tempList = ppAdjEdge[i];
-		auto currentNode = tempList->pHead;
+		auto currentNode = ppAdjEdge[i].pHead;
 		auto tempNode = currentNode;
 		for (auto j = 0; j < maxVertexCount; j++)
 		{
@@ -29,13 +27,7 @@ void LinkedGraph::deleteLinkedGraph()
 		}
 	}
 
-	for (auto i = 0; i < maxVertexCount; i++)
-	{
-		SAFE_DELETE(ppAdjEdge[i]);
-	}
-
 	SAFE_DELETE_ARRAY(ppAdjEdge);
-
 }
 
 bool LinkedGraph::isEmptyLG()
@@ -101,13 +93,13 @@ bool LinkedGraph::addEdgewithWeightLG(int fromVertexID, int toVertexID, int weig
 	return ret;
 }
 
-bool LinkedGraph::addLLElementForVertex(GraphLinkedList* pList, int position, GraphVertex vertex)
+bool LinkedGraph::addLLElementForVertex(GraphLinkedList& pList, int position, GraphVertex vertex)
 {
 	GraphListNode node = GraphListNode();
 
 	node.data = vertex;
 
-	return pList->addLLElment(position, node);
+	return pList.addLLElment(position, node);
 }
 
 
@@ -171,7 +163,7 @@ bool LinkedGraph::removeEdgeLG(int fromVertexID, int toVertexID)
 	return ret;
 }
 
-void LinkedGraph::deleteGraphNode(GraphLinkedList* pList, int delVertxID)
+void LinkedGraph::deleteGraphNode(GraphLinkedList& pList, int delVertxID)
 {
 	int position = 0;
 	GraphListNode* pNode = nullptr;
@@ -179,16 +171,16 @@ void LinkedGraph::deleteGraphNode(GraphLinkedList* pList, int delVertxID)
 	position = findGraphNodePosition(pList, delVertxID);
 	if (position >= 0)
 	{
-		pList->removeLLElement(position);
+		pList.removeLLElement(position);
 	}
 }
 
-int LinkedGraph::findGraphNodePosition(GraphLinkedList* pList, int vertexID)
+int LinkedGraph::findGraphNodePosition(GraphLinkedList& pList, int vertexID)
 {
 	int position = 0;
 	GraphListNode* pNode = nullptr;
 
-	pNode = pList->pHead->pNext;
+	pNode = pList.pHead->pNext;
 	while (pNode != nullptr)
 	{
 		if (pNode->data.vertexID == vertexID)
@@ -211,7 +203,7 @@ void LinkedGraph::displayLinkedGraph()
 	GraphListNode* currentNode = nullptr;
 	for (auto i = 0; i < maxVertexCount; i++)
 	{
-		currentNode = ppAdjEdge[i]->pHead;
+		currentNode = ppAdjEdge[i].pHead;
 		std::cout << pVertex[i] << " : ";
 		if (pVertex[i] == NOT_USED)
 		{
@@ -232,7 +224,7 @@ void LinkedGraph::displayLinkedGraph()
 
 	for (auto i = 0; i < maxVertexCount; i++)
 	{
-		currentNode = ppAdjEdge[i]->pHead;
+		currentNode = ppAdjEdge[i].pHead;
 
 		for (auto j = 0; j < maxVertexCount; j++)
 		{

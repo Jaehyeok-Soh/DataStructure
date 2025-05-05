@@ -8,7 +8,7 @@ class LinkedGraph
 	int currentVertexCount = 0;
 	int currentEdgeCount = 0;
 	int graphType;
-	GraphLinkedList** ppAdjEdge;
+	GraphLinkedList* ppAdjEdge;
 	int* pVertex;
 
 	LinkedGraph() = default;
@@ -23,8 +23,8 @@ class LinkedGraph
 	bool checkVertexValid(int vertexID);
 	bool removeVertexLG(int vertexID);
 	bool removeEdgeLG(int fromVertexID, int toVertexID);
-	void deleteGraphNode(GraphLinkedList* pList, int delVertxID);
-	int findGraphNodePosition(GraphLinkedList* pList, int vertexID);
+	void deleteGraphNode(GraphLinkedList& pList, int delVertxID);
+	int findGraphNodePosition(GraphLinkedList& pList, int vertexID);
 	void displayLinkedGraph();
-	bool addLLElementForVertex(GraphLinkedList* pList, int position, GraphVertex vertex);
+	bool addLLElementForVertex(GraphLinkedList& pList, int position, GraphVertex vertex);
 };
