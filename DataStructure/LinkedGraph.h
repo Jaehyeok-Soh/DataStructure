@@ -2,6 +2,8 @@
 #include "ArrayGraph.h"
 #include "GraphLinkedList.h"
 #include "GraphLinkedQueue.h"
+#include "GraphArrayHeap.h"
+#include "GraphLinkedStack.h"
 
 class LinkedGraph
 {
@@ -37,4 +39,10 @@ public:
 	//graphLinkedStack.h
 	void traversalDFS(int startVertexID);
 	void traversalBSF(int startVertexID);
+
+	//graphMST
+	LinkedGraph* mstKruskal();
+	GraphArrayMinHeap* orderEdges();
+
+	bool checkCycle(int fromVertexID, int toVertexID);
 };
