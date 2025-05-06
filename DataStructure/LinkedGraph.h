@@ -1,6 +1,7 @@
 #pragma once
 #include "ArrayGraph.h"
 #include "GraphLinkedList.h"
+#include "GraphLinkedQueue.h"
 
 class LinkedGraph
 {
@@ -27,9 +28,12 @@ public:
 	void deleteGraphNode(GraphLinkedList* pList, int delVertxID);
 	int findGraphNodePosition(GraphLinkedList* pList, int vertexID);
 	void displayLinkedGraph();
+	
 	bool addLLElementForVertex(GraphLinkedList* pList, int position, GraphVertex vertex);
 
-	//DFS
+	bool enqueueLQForBFS(GraphLinkedQueue* pQueue, int nodeID);
+
+	//traversal
 	//graphLinkedStack.h
 	void traversalDFS(int startVertexID);
 	void traversalBSF(int startVertexID);

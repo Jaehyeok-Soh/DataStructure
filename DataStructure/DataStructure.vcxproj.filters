@@ -132,6 +132,9 @@
     <ClInclude Include="GraphLinkedStack.h">
       <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
     </ClInclude>
+    <ClInclude Include="GraphLinkedQueue.h">
+      <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -259,6 +262,9 @@
     </ClCompile>
     <ClCompile Include="LinkedGraphExample.cpp">
       <Filter>Graph\LinkedGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphLinkedQueue.cpp">
+      <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

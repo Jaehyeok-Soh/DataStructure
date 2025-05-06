@@ -117,6 +117,13 @@ bool LinkedGraph::addLLElementForVertex(GraphLinkedList* pList, int position, Gr
 	return pList->addLLElment(position, node);
 }
 
+bool LinkedGraph::enqueueLQForBFS(GraphLinkedQueue* pQueue, int nodeID)
+{
+	GraphLinkedQueueNode node;
+	node.vertexID = nodeID;
+	return pQueue->insertRearLD(node);
+}
+
 bool LinkedGraph::checkVertexValid(int vertexID)
 {
 	bool ret = SUCCESS;

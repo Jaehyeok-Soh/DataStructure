@@ -43,4 +43,41 @@ void LinkedGraph::traversalDFS(int startVertexID)
 
 void LinkedGraph::traversalBSF(int startVertexID)
 {
+	int vertextID = 0;
+	
+	GraphLinkedQueue* pQueue = new GraphLinkedQueue();
+	GraphLinkedQueueNode* pQueueNode = nullptr;
+
+	GraphListNode* pListNode = nullptr;
+	bool* pVisited = new bool[maxVertexCount]();
+
+	pVisited[startVertexID] = true;
+
+	enqueueLQForBFS(pQueue, startVertexID);
+
+	while (pQueue->isLinkedDequeEmpty() == false)
+	{
+		pQueueNode = pQueue->deleteFrontLD();
+		if (pQueueNode != nullptr)
+		{
+			vertextID = pQueueNode->vertexID;
+			std::cout << vertextID << "-visited\n";
+
+			pListNode = ppAdjEdge[vertextID].pHead;
+			while (pListNode != nullptr)
+			{
+				int vertexId = pListNode->data.vertexID;
+				if (pVisited[vertexId] == false)
+				{
+					pVisited[vertexId] = true;
+					enqueueLQForBFS(pQueue, vertexId);
+				}
+				pListNode = pListNode->pNext;
+			}
+		}
+	}
+
+	SAFE_DELETE_ARRAY(pVisited);
+	pQueue->deleteLinkedDeque();
+	SAFE_DELETE(pQueue);
 }

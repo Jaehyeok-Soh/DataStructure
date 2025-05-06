@@ -25,6 +25,9 @@ int LinkedGraphExample()
 	std::cout << "\nDFS traversal:\n";
 	g1.traversalDFS(0);
 
+	std::cout << "\nBFS traversal:\n";
+	g1.traversalBSF(0);
+
 	g1.deleteLinkedGraph();
 
 	return 0;
