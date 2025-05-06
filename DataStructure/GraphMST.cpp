@@ -49,6 +49,72 @@ LinkedGraph* LinkedGraph::mstKruskal()
 	return pReturn;
 }
 
+LinkedGraph* LinkedGraph::mstPrim(int startVertexID)
+{
+	int nodeCount = currentVertexCount;
+	int fromVertexID = 0;
+	GraphEdge minWeightEdge = { 0, };
+	LinkedGraph* pReturn = new LinkedGraph(maxVertexCount, GRAPH_UNDIRECTED);
+
+	pReturn->addVertexLG(startVertexID);
+	while (pReturn->currentVertexCount < nodeCount)
+	{
+		minWeightEdge.vertexIDFrom = 0;
+		minWeightEdge.vertexIDTo = 0;
+		minWeightEdge.weight = 99999;//define max_int
+
+		for (auto i = 0; i < maxVertexCount; i++)
+		{
+			if (pReturn->pVertex[i] == true)
+			{
+				fromVertexID = i;
+				getMinWeightEdge(pReturn, fromVertexID, &minWeightEdge);
+			}
+		}
+		std::cout << pReturn->currentVertexCount << ">> min weight : "
+			<< minWeightEdge.vertexIDFrom << ", "
+			<< minWeightEdge.vertexIDTo << " -> "
+			<< minWeightEdge.weight << std::endl;
+
+		pReturn->addVertexLG(minWeightEdge.vertexIDTo);
+		pReturn->addEdgewithWeightLG(minWeightEdge.vertexIDFrom, minWeightEdge.vertexIDTo, minWeightEdge.weight);
+	}
+
+	return pReturn;
+}
+
+void LinkedGraph::getMinWeightEdge(LinkedGraph* pMST, int fromVertexID, GraphEdge* pMinWeightEdge)
+{
+	bool isCycle = false;
+	bool isAlready = false;
+	GraphLinkedList pEdgeList = ppAdjEdge[fromVertexID];
+	GraphListNode* pListNode = pEdgeList.pHead;
+
+	while (pListNode != nullptr)
+	{
+		int vertexID = pListNode->data.vertexID;
+		int weight = pListNode->data.weight;
+
+		if (pListNode->data.weight < pMinWeightEdge->weight)
+		{
+			isAlready = pMST->checkEdge(fromVertexID, vertexID);
+			if (isAlready == false)
+			{
+				isCycle = pMST->checkCycle(fromVertexID, vertexID);
+			}
+
+			if (isAlready == false && isCycle == false)
+			{
+				pMinWeightEdge->vertexIDFrom = fromVertexID;
+				pMinWeightEdge->vertexIDTo = vertexID;
+				pMinWeightEdge->weight = weight;
+			}
+		}
+
+		pListNode = pListNode->pNext;
+	}
+}
+
 //https://github.com/woosanguk/c-data-structure/blob/master/08/graph-mst/graphmst.c
 //line 56
 GraphArrayMinHeap* LinkedGraph::orderEdges()
@@ -85,7 +151,7 @@ bool LinkedGraph::checkCycle(int fromVertexID, int toVertexID)
 	int ret = false;
 
 	int vertextID = 0;
-	GraphLinkedStack* pStack;
+	GraphLinkedStack* pStack = new GraphLinkedStack();
 	GraphLinkedStackNode* pStackNode = nullptr;
 	GraphListNode* pListNode = nullptr;
 	bool* pVisited = new bool[maxVertexCount]();
@@ -119,5 +185,18 @@ bool LinkedGraph::checkCycle(int fromVertexID, int toVertexID)
 	SAFE_DELETE_ARRAY(pVisited);
 	pStack->deleteLinkedStack();
 	SAFE_DELETE(pStack);
+	return ret;
+}
+
+bool LinkedGraph::checkEdge(int fromVertexID, int toVertexID)
+{
+	bool ret = false;
+
+	GraphLinkedList pEdgeList = ppAdjEdge[fromVertexID];
+	int position = findGraphNodePosition(&pEdgeList, toVertexID);
+	if (position >= 0)
+	{
+		ret = true;
+	}
 	return ret;
 }

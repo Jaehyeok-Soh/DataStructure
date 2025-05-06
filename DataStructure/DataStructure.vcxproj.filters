@@ -135,6 +135,9 @@
     <ClInclude Include="GraphLinkedQueue.h">
       <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
     </ClInclude>
+    <ClInclude Include="GraphArrayHeap.h">
+      <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -264,6 +267,12 @@
       <Filter>Graph\LinkedGraph</Filter>
     </ClCompile>
     <ClCompile Include="GraphLinkedQueue.cpp">
+      <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphMST.cpp">
+      <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphArrayHeap.cpp">
       <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
     </ClCompile>
   </ItemGroup>

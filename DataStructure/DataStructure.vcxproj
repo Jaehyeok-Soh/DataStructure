@@ -140,6 +140,7 @@
     <ClInclude Include="Define.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="Exprdef.h" />
+    <ClInclude Include="GraphArrayHeap.h" />
     <ClInclude Include="GraphLinkedList.h" />
     <ClInclude Include="GraphLinkedQueue.h" />
     <ClInclude Include="GraphLinkedStack.h" />
@@ -173,10 +174,12 @@
     <ClCompile Include="CircularList.cpp" />
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="ExprLinkedStack.cpp" />
+    <ClCompile Include="GraphArrayHeap.cpp" />
     <ClCompile Include="GraphExample.cpp" />
     <ClCompile Include="GraphLinkedList.cpp" />
     <ClCompile Include="GraphLinkedQueue.cpp" />
     <ClCompile Include="GraphLinkedStack.cpp" />
+    <ClCompile Include="GraphMST.cpp" />
     <ClCompile Include="GraphTraversal.cpp" />
     <ClCompile Include="HeapExample.cpp" />
     <ClCompile Include="LinkedDeque.cpp" />

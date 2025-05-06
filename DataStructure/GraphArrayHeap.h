@@ -45,6 +45,4 @@ public:
 	void deleteArrayMinHeap();
 	void insertMinHeapAH(GraphHeapNode element);
 	GraphHeapNode* deleteMinHeapAH();
-
-	~GraphArrayMinHeap() override;
 };

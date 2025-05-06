@@ -3,6 +3,8 @@
 
 LinkedGraph::LinkedGraph(int _maxVertexCount, int _graphType)
 {
+	currentEdgeCount = 0;
+	currentVertexCount = 0;
 	maxVertexCount = _maxVertexCount;
 	graphType = _graphType;
 	ppAdjEdge = new GraphLinkedList[_maxVertexCount]();
@@ -14,6 +16,7 @@ LinkedGraph::~LinkedGraph()
 	if (ppAdjEdge != nullptr)
 	{
 		deleteLinkedGraph();
+		SAFE_DELETE_ARRAY(pVertex);
 	}
 }
 
@@ -22,27 +25,16 @@ void LinkedGraph::deleteLinkedGraph()
 	for (auto i = 0; i < maxVertexCount; i++)
 	{
 		auto currentNode = ppAdjEdge[i].pHead;
-		if (currentNode == nullptr)
+		while (currentNode != nullptr)
 		{
-			continue;
-		}
-
-		auto tempNode = currentNode;
-		for (auto j = 0; j < ppAdjEdge[i].currentElementCount; j++)
-		{
-			if (currentNode->pNext != nullptr)
-			{
-				currentNode = currentNode->pNext;
-			}
-			else
-			{
-				currentNode = nullptr;
-			}
+			auto tempNode = currentNode;
+			currentNode = currentNode->pNext;
 			SAFE_DELETE(tempNode);
 		}
 	}
 
 	SAFE_DELETE_ARRAY(ppAdjEdge);
+	SAFE_DELETE_ARRAY(pVertex);
 }
 
 bool LinkedGraph::isEmptyLG()
@@ -92,7 +84,7 @@ bool LinkedGraph::addEdgewithWeightLG(int fromVertexID, int toVertexID, int weig
 
 	toNode.vertexID = toVertexID;
 	toNode.weight = weight;
-	addLLElementForVertex(&ppAdjEdge[fromVertexID], 0, toNode);
+	addLLElementForVertex(ppAdjEdge[fromVertexID], 0, toNode);
 	currentEdgeCount++;
 
 	//undirected
@@ -101,20 +93,20 @@ bool LinkedGraph::addEdgewithWeightLG(int fromVertexID, int toVertexID, int weig
 		GraphVertex fromNode;
 		fromNode.vertexID = fromVertexID;
 		fromNode.weight = weight;
-		addLLElementForVertex(&ppAdjEdge[toVertexID], 0, fromNode);
+		addLLElementForVertex(ppAdjEdge[toVertexID], 0, fromNode);
 		currentEdgeCount++;
 	}
 
 	return ret;
 }
 
-bool LinkedGraph::addLLElementForVertex(GraphLinkedList* pList, int position, GraphVertex vertex)
+bool LinkedGraph::addLLElementForVertex(GraphLinkedList& pList, int position, GraphVertex vertex)
 {
 	GraphListNode node = GraphListNode();
 
 	node.data = vertex;
 
-	return pList->addLLElment(position, node);
+	return pList.addLLElment(position, node);
 }
 
 bool LinkedGraph::enqueueLQForBFS(GraphLinkedQueue* pQueue, int nodeID)
@@ -201,7 +193,7 @@ int LinkedGraph::findGraphNodePosition(GraphLinkedList* pList, int vertexID)
 	int position = 0;
 	GraphListNode* pNode = nullptr;
 
-	pNode = pList->pHead->pNext;
+	pNode = pList->pHead;
 	while (pNode != nullptr)
 	{
 		if (pNode->data.vertexID == vertexID)

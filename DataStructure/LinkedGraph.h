@@ -5,6 +5,13 @@
 #include "GraphArrayHeap.h"
 #include "GraphLinkedStack.h"
 
+struct GraphEdge
+{
+	int vertexIDFrom;
+	int vertexIDTo;
+	int weight;
+};
+
 class LinkedGraph
 {
 public:
@@ -31,7 +38,7 @@ public:
 	int findGraphNodePosition(GraphLinkedList* pList, int vertexID);
 	void displayLinkedGraph();
 	
-	bool addLLElementForVertex(GraphLinkedList* pList, int position, GraphVertex vertex);
+	bool addLLElementForVertex(GraphLinkedList& pList, int position, GraphVertex vertex);
 
 	bool enqueueLQForBFS(GraphLinkedQueue* pQueue, int nodeID);
 
@@ -42,7 +49,10 @@ public:
 
 	//graphMST
 	LinkedGraph* mstKruskal();
-	GraphArrayMinHeap* orderEdges();
+	LinkedGraph* mstPrim(int startVertexID);
+	void getMinWeightEdge(LinkedGraph* pMST, int fromVertexID, GraphEdge* pMinWeightEdge);
 
+	GraphArrayMinHeap* orderEdges();
 	bool checkCycle(int fromVertexID, int toVertexID);
+	bool checkEdge(int fromVertexID, int toVertexID);
 };

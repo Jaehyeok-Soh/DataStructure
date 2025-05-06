@@ -23,6 +23,8 @@ public:
 	GraphListNode* pHead = nullptr;
 	GraphListNode* pTail = nullptr;
 
+	GraphLinkedList();
+
 	bool addLLElment(int position, GraphListNode node);
 	bool removeLLElement(int position);
 };

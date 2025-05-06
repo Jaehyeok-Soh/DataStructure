@@ -1,6 +1,14 @@
 #include "pch.h"
 #include "GraphLinkedList.h"
 
+GraphLinkedList::GraphLinkedList()
+{
+	currentElementCount = 0;
+
+	pHead = nullptr;
+	pTail = nullptr;
+}
+
 bool GraphLinkedList::addLLElment(int position, GraphListNode node)
 {
 	bool ret = false;
