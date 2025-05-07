@@ -235,21 +235,20 @@ void LinkedGraph::displayLinkedGraph()
 		std::cout << std::endl;
 	}
 
-	for (auto i = 0; i < maxVertexCount; i++)
-	{
-		currentNode = ppAdjEdge[i].pHead;
+	std::cout << std::endl;
 
-		for (auto j = 0; j < maxVertexCount; j++)
-		{
-			if (currentNode == nullptr)
-			{
-				std::cout << "0" << " ";
-				continue;
+	int position = 0;
+	for (auto i = 0; i < maxVertexCount; i++) {
+		for (auto j = 0; j < maxVertexCount; j++) {
+			position = findGraphNodePosition(&ppAdjEdge[i], j);
+
+			if (position >= 0) {
+				currentNode = ppAdjEdge[i].getLLElement(position);
+				std::cout << currentNode->data.weight << " ";
 			}
-
-			std::cout << currentNode->data.weight << " ";
-			currentNode = currentNode->pNext;
-
+			else {
+				std::cout << "0 ";
+			}
 		}
 		std::cout << std::endl;
 	}

@@ -60,4 +60,7 @@ public:
 	int* shortestPathDijkstra(int startVertexID);
 	int getMinDistance(int* distance, bool* isSelected, int maxNodeCount);
 	int getEdgeWeight(int fromVertexID, int toVertexID);
+
+	int** shortestPathFloyd();
+	void printMatrix(int** A, int maxNodeCount);
 };

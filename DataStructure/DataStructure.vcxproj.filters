@@ -58,6 +58,9 @@
     <Filter Include="Graph\LinkedGraph\GraphTraversal">
       <UniqueIdentifier>{1a41ac3a-8107-4486-ae1e-acd973b49626}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Graph\LinkedGraph\GraphSP">
+      <UniqueIdentifier>{1301cc6b-ef62-4b08-8dbe-ccc03667d65e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -137,9 +140,6 @@
     </ClInclude>
     <ClInclude Include="GraphArrayHeap.h">
       <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphSP.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -279,7 +279,10 @@
       <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
     </ClCompile>
     <ClCompile Include="GraphSP.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Graph\LinkedGraph\GraphSP</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphSPExample.cpp">
+      <Filter>Graph\LinkedGraph\GraphSP</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

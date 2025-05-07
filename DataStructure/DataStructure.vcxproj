@@ -144,7 +144,6 @@
     <ClInclude Include="GraphLinkedList.h" />
     <ClInclude Include="GraphLinkedQueue.h" />
     <ClInclude Include="GraphLinkedStack.h" />
-    <ClInclude Include="GraphSP.h" />
     <ClInclude Include="LinkedDeque.h" />
     <ClInclude Include="LinkedGraph.h" />
     <ClInclude Include="LinkedList.h" />
@@ -182,6 +181,7 @@
     <ClCompile Include="GraphLinkedStack.cpp" />
     <ClCompile Include="GraphMST.cpp" />
     <ClCompile Include="GraphSP.cpp" />
+    <ClCompile Include="GraphSPExample.cpp" />
     <ClCompile Include="GraphTraversal.cpp" />
     <ClCompile Include="HeapExample.cpp" />
     <ClCompile Include="LinkedDeque.cpp" />
