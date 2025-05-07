@@ -27,4 +27,5 @@ public:
 
 	bool addLLElment(int position, GraphListNode node);
 	bool removeLLElement(int position);
+	GraphListNode* getLLElement(int position);
 };

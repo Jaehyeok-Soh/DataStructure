@@ -1,5 +1,7 @@
 #pragma once
 
+#define MAX_INT 99999
+
 #define USED		true
 #define NOT_USED	false
 

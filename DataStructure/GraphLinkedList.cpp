@@ -117,3 +117,25 @@ bool GraphLinkedList::removeLLElement(int position)
 
 	return ret;
 }
+
+GraphListNode* GraphLinkedList::getLLElement(int position)
+{
+	GraphListNode* pReturn = nullptr;
+	GraphListNode* currentNode = pHead;
+
+	if (position >= 0 && position < currentElementCount)
+	{
+		currentNode = pHead;
+		for (auto i = 0; i < position; i++)
+		{
+			currentNode = currentNode->pNext;
+		}
+		pReturn = currentNode;
+	}
+	else
+	{
+		std::cout << "error, out of index\n";
+	}
+
+	return pReturn;
+}

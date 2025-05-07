@@ -138,6 +138,9 @@
     <ClInclude Include="GraphArrayHeap.h">
       <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
     </ClInclude>
+    <ClInclude Include="GraphSP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -274,6 +277,9 @@
     </ClCompile>
     <ClCompile Include="GraphArrayHeap.cpp">
       <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphSP.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
