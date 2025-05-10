@@ -19,7 +19,7 @@ int GraphSPExample()
 	g.addEdgewithWeightLG(3, 4, 8);
 	g.addEdgewithWeightLG(3, 5, 3);
 	g.addEdgewithWeightLG(4, 5, 4);
-
+	
 	std::cout << "G1:\n";
 	g.displayLinkedGraph();
 

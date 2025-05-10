@@ -61,6 +61,9 @@
     <Filter Include="Graph\LinkedGraph\GraphSP">
       <UniqueIdentifier>{1301cc6b-ef62-4b08-8dbe-ccc03667d65e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sort">
+      <UniqueIdentifier>{5f4d9887-17af-4d75-89b5-abd47422115a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -283,6 +286,24 @@
     </ClCompile>
     <ClCompile Include="GraphSPExample.cpp">
       <Filter>Graph\LinkedGraph\GraphSP</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectionSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="BubbleSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertinSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="ShellSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeSort.cpp">
+      <Filter>Sort</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

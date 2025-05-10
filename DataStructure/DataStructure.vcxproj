@@ -171,6 +171,7 @@
     <ClCompile Include="BinTreeOp.cpp" />
     <ClCompile Include="BintreeTraversal.cpp" />
     <ClCompile Include="BintreeTraversalRec.cpp" />
+    <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="CircularList.cpp" />
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="ExprLinkedStack.cpp" />
@@ -184,6 +185,7 @@
     <ClCompile Include="GraphSPExample.cpp" />
     <ClCompile Include="GraphTraversal.cpp" />
     <ClCompile Include="HeapExample.cpp" />
+    <ClCompile Include="InsertinSort.cpp" />
     <ClCompile Include="LinkedDeque.cpp" />
     <ClCompile Include="LinkedDequeExample.cpp" />
     <ClCompile Include="LinkedGraph.cpp" />
@@ -197,8 +199,12 @@
     <ClCompile Include="LinkedStackExample.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mapLinkedStack.cpp" />
+    <ClCompile Include="MergeSort.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="PolyList.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
+    <ClCompile Include="SelectionSort.cpp" />
+    <ClCompile Include="ShellSort.cpp" />
     <ClCompile Include="Simlinkedqueue.cpp" />
     <ClCompile Include="SimMain.cpp" />
     <ClCompile Include="StackUtil.cpp" />
