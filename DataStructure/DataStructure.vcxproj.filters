@@ -64,6 +64,12 @@
     <Filter Include="Sort">
       <UniqueIdentifier>{5f4d9887-17af-4d75-89b5-abd47422115a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Search">
+      <UniqueIdentifier>{6fdc4f50-770a-48d7-a724-35eaad52a419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Search\Hash">
+      <UniqueIdentifier>{960aceed-607f-4d49-992c-a50a78f7d8c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -143,6 +149,15 @@
     </ClInclude>
     <ClInclude Include="GraphArrayHeap.h">
       <Filter>Graph\LinkedGraph\GraphTraversal</Filter>
+    </ClInclude>
+    <ClInclude Include="hashingLinkedList.h">
+      <Filter>Search\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Search.h">
+      <Filter>Search</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -304,6 +319,24 @@
     </ClCompile>
     <ClCompile Include="MergeSort.cpp">
       <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="HeapSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="seqIndexSearch.cpp">
+      <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="binSearch.cpp">
+      <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="hashingLinkedList.cpp">
+      <Filter>Search\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="staticHashing.cpp">
+      <Filter>Search</Filter>
+    </ClCompile>
+    <ClCompile Include="staticChainingHashing.cpp">
+      <Filter>Search\Hash</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

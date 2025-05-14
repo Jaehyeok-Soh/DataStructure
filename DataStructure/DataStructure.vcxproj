@@ -144,6 +144,7 @@
     <ClInclude Include="GraphLinkedList.h" />
     <ClInclude Include="GraphLinkedQueue.h" />
     <ClInclude Include="GraphLinkedStack.h" />
+    <ClInclude Include="hashingLinkedList.h" />
     <ClInclude Include="LinkedDeque.h" />
     <ClInclude Include="LinkedGraph.h" />
     <ClInclude Include="LinkedList.h" />
@@ -151,8 +152,10 @@
     <ClInclude Include="LinkedStack.h" />
     <ClInclude Include="MapDef.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Search.h" />
     <ClInclude Include="simdef.h" />
     <ClInclude Include="Simlinkedqueue.h" />
+    <ClInclude Include="Sort.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArrayGraph.cpp" />
@@ -163,6 +166,7 @@
     <ClCompile Include="ArrayQueueExample.cpp" />
     <ClCompile Include="ArrayStack.cpp" />
     <ClCompile Include="ArrayStackExample.cpp" />
+    <ClCompile Include="binSearch.cpp" />
     <ClCompile Include="BinSearchTree.cpp" />
     <ClCompile Include="BinTree.cpp" />
     <ClCompile Include="BinTreeExample.cpp" />
@@ -184,7 +188,9 @@
     <ClCompile Include="GraphSP.cpp" />
     <ClCompile Include="GraphSPExample.cpp" />
     <ClCompile Include="GraphTraversal.cpp" />
+    <ClCompile Include="hashingLinkedList.cpp" />
     <ClCompile Include="HeapExample.cpp" />
+    <ClCompile Include="HeapSort.cpp" />
     <ClCompile Include="InsertinSort.cpp" />
     <ClCompile Include="LinkedDeque.cpp" />
     <ClCompile Include="LinkedDequeExample.cpp" />
@@ -204,10 +210,13 @@
     <ClCompile Include="PolyList.cpp" />
     <ClCompile Include="QuickSort.cpp" />
     <ClCompile Include="SelectionSort.cpp" />
+    <ClCompile Include="seqIndexSearch.cpp" />
     <ClCompile Include="ShellSort.cpp" />
     <ClCompile Include="Simlinkedqueue.cpp" />
     <ClCompile Include="SimMain.cpp" />
     <ClCompile Include="StackUtil.cpp" />
+    <ClCompile Include="staticChainingHashing.cpp" />
+    <ClCompile Include="staticHashing.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

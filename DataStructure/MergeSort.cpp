@@ -1,5 +1,4 @@
 #include "pch.h"
-
 void mergeSort(int value[], int buffer[], int start, int end)
 {
 	int middle(0);

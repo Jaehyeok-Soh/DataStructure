@@ -36,7 +36,7 @@ int partitionQuickSort(int value[], int start, int end)
 			value[right] = temp;
 		}
 	}
-	
+
 	temp = value[pivot];
 	value[pivot] = value[right];
 	value[right] = temp;

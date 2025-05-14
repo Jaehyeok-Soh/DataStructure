@@ -14,6 +14,9 @@
 #include "DoublyLinkedList.h"
 #include "ArrayStack.h"
 #include "LinkedStack.h"
+
+#include "Sort.h"
+#include "Search.h"
 //////////////////////////////////////////////////////
 
 #ifdef _DEBUG

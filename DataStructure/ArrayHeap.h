@@ -39,5 +39,10 @@ public:
 class ArrayMinHeap : public ArrayHeap
 {
 public:
+	ArrayMinHeap(int elementCount) : ArrayHeap(elementCount) {};
 	~ArrayMinHeap() override;
+
+	void deleteArrayMinHeap();
+	void insertMinHeapAH(HeapNode element);
+	HeapNode* deleteMinHeapAH();
 };
