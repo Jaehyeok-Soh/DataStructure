@@ -54,7 +54,7 @@ bool LinkedGraph::addVertexLG(int vertexID)
 		}
 		else
 		{
-			std::cout << "error, node duplicated\n";
+			std::cout << "error, node conflict\n";
 			ret = FAIL;
 		}
 	}

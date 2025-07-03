@@ -70,6 +70,9 @@
     <Filter Include="Search\Hash">
       <UniqueIdentifier>{960aceed-607f-4d49-992c-a50a78f7d8c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Search\AVLTree">
+      <UniqueIdentifier>{e34d9ac3-9a28-4191-841e-9ba4d88ef83e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -158,6 +161,12 @@
     </ClInclude>
     <ClInclude Include="Search.h">
       <Filter>Search</Filter>
+    </ClInclude>
+    <ClInclude Include="avlLinkedStack.h">
+      <Filter>Search\AVLTree</Filter>
+    </ClInclude>
+    <ClInclude Include="avlTree.h">
+      <Filter>Search\AVLTree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -337,6 +346,12 @@
     </ClCompile>
     <ClCompile Include="staticChainingHashing.cpp">
       <Filter>Search\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="avlLinkedStack.cpp">
+      <Filter>Search\AVLTree</Filter>
+    </ClCompile>
+    <ClCompile Include="avlTree.cpp">
+      <Filter>Search\AVLTree</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

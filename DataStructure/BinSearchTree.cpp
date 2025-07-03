@@ -26,7 +26,7 @@ bool BinSearchTree::insertElementBST(BinSearchTreeNode element)
 	{
 		if (element.key == pParentNode->key)
 		{
-			std::cout << "error, key duplicated\n";
+			std::cout << "error, key conflict\n";
 			ret = false;
 			return ret;
 		}

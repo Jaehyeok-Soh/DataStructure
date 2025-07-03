@@ -43,7 +43,7 @@ bool ArrayGraph::addVertexAG(int vertexID)
 		}
 		else
 		{
-			std::cout << "error, duplicated node\n";
+			std::cout << "error, conflict node\n";
 			ret = FAIL;
 		}
 	}
